@@ -1,0 +1,54 @@
+       <div style="text-align: center;">
+        <h3> Saeed service Render</h3>
+      </div>
+      <demo-user [userName]="getCurrentUser()" (onLogout)="logOut()"></demo-user>
+    <button pButton pRipple label="Requests" icon="pi pi-chart-bar" routerLink="/services-render/requests"></button>
+      <div class="container-fluid mt-n10">   
+        <div class="card mb-4">
+             <div class="card">
+    <div class="center">   
+        <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+            <div class="container-fluid">
+                <div class="page-header-content">
+                    <h1 class="page-header-title">
+                        <div class="page-header-icon"><i data-feather="map"></i></div>
+                        <span>Services data</span>
+                    </h1>
+                    <div class="page-header-subtitle">Activated services in system</div>
+                </div> 
+            </div>
+        </div>
+             <div class="card">
+                 <p-table #load_dt dataKey="id" [columns]="columns" [value]="data" [rows]="10" [paginator]="true"
+                 [rowHover]="true" dataKey="id" [responsive]="true" [resizableColumns]="true"
+                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+                 [showCurrentPageReport]="true" [filterDelay]="0" >
+                 <ng-template pTemplate="caption">
+                    <div class="p-d-flex p-ai-center p-jc-between">
+                        <h5 class="p-m-0">Services</h5>
+                    </div>
+                    
+        
+                </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+                            <tr >
+                                <th *ngFor="let col of columns" pResizableColumn>
+                                    {{col.header}}
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns">
+                            <tr>
+                                <td *ngFor="let col of columns" class="ui-resizable-column">                
+                                    {{rowData[col.field]}}
+                                </td>
+                            </tr>
+                            
+                        </ng-template>
+                    </p-table>
+             </div>
+             
+         </div> 
+         </div>
+         </div>
+         </div>

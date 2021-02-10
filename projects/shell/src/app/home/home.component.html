@@ -1,0 +1,6 @@
+<div style="text-align: center;">
+   <h1>Welcome to Saeed Service Store</h1> 
+</div>
+<demo-user [userName]="getCurrentUser()" (onLogout)="logOut()"></demo-user>
+<!-- <demo-auth (onLogin)="login($event)" (onLogout)="logOut()"></demo-auth> -->
+<demo-auth (onLogin)="login($event)"></demo-auth>

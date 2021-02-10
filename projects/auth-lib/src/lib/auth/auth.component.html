@@ -1,0 +1,28 @@
+
+<form >
+    <div class="container">
+        <div style="text-align: center;">
+              <h2 >Login</h2>  
+      
+        </div>
+           
+<div class="test">
+    User Name: 
+</div>
+<div>
+    <input name="userName" [(ngModel)]="userName" ><br>
+</div>
+<div>
+    Password: 
+</div>
+<div>
+    <input name="userName" type="password" [(ngModel)]="password" ><br>
+</div>
+
+<div style="margin: auto;">
+    <button (click)="onLoginClick({name:userName,password:password})">Login</button>
+    <!-- <button (click)="onLogoutClick()"  >Logout</button> -->
+
+</div>
+</div>
+</form>

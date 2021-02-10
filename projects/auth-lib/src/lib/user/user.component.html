@@ -1,0 +1,3 @@
+<p *ngIf="userName">Current User: {{userName}}</p>
+<h3 class="notLogedin" *ngIf="!userName">You are not logged in !</h3>
+<button *ngIf="userName" (click)="onLogoutClick($event)" >LogOut</button>
